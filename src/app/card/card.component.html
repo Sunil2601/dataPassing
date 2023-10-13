@@ -1,0 +1,18 @@
+<div class="card mb-5 mb-lg-0">
+  <div class="card-body">
+    <h5 class="card-title text-muted text-uppercase text-center">{{plan.plan}}</h5>
+    <h6 class="card-price text-center">${{plan.price}}<span class="period">{{plan.period}}</span></h6>
+    <hr>
+    <ul class="fa-ul">
+      <li *ngFor="let item of plan.items;index as i">
+        <div  >
+          <i [ngClass]="plan.ticks[i]==1? 'fas fa-check':'text-muted fas fa-times'"></i>
+          <div class="d-inline" [ngClass]="plan.ticks[i]==0? 'text-muted':''"  >{{"  "+item}}</div> 
+        </div>
+      </li>
+    </ul>
+    <div class="d-grid">
+      <a href="#" class="btn btn-primary text-uppercase">Button</a>
+    </div>
+  </div>
+</div>
